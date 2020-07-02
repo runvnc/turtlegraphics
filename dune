@@ -1,5 +1,16 @@
-(library
-  (name turtle)
-  (public_name turtle)
-  (libraries graphics base stdio)
+(ocamllex
+  (modules lexer)
 )
+
+(menhir
+  (modules parser)
+  (flags -la 2)
+  (infer true)
+)
+
+
+(executable
+ (name percog)
+ (libraries graphics unix bigarray base stdio turtle))
+
+;core
