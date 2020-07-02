@@ -1,0 +1,5 @@
+(library
+  (name turtle)
+  (public_name turtle)
+  (libraries graphics base stdio)
+)
